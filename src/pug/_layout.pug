@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="ko")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
@@ -8,51 +8,57 @@ html(lang="en")
         meta(name="format-detaction", content="telephone=no, address=no, email=no")
         meta(name="referrer" content="strict-origin")
 
-        meta(name="title", content="Modern Publisher")
-        meta(name="description", content="for Modern Publisher")
-        meta(name="keywords", content="gulp, webpack, publisher, sass, scss, pug, es6, babel ")
+        block title
+            - var page
+        - var title = `${page} - 1stOn`
+        meta(name="title", content=title)
+        meta(name="description", content=`for ${title}`)
+        meta(name="keywords", content="ton, 톤, 블록체인, blockchain")
 
-        meta(property="og:title" content="Modern Publisher")
-        meta(property="og:url" content="https://modern-publisher.ga")
-        meta(property="og:description" content="for Modern Publisher")
-        meta(property="og:image" content="/assets/icon/chrome-touch-icon-512x512.png")
+        meta(property="og:title" content= title)
+        meta(property="og:url" content="")
+        meta(property="og:description" content=`for ${title}`)
+        meta(property="og:image" content="/assets/images/favicons/android-icon-512x512.png")
         meta(property="og:type" content="website")
         
         meta(name="apple-mobile-web-app-capable", content="yes")
-        meta(name="apple-mobile-web-app-status-bar-style" content="black")
+        meta(name="apple-mobile-web-app-status-bar-style" content="white")
+        meta(name="apple-mobile-web-app-title" content= title)
+        link(link='apple-touch-icon' size="57x57" href="/assets/images/favicons/apple-icon-57x57.png")
+        link(link='apple-touch-icon' size="60x60" href="/assets/images/favicons/apple-icon-60x60.png")
+        link(link='apple-touch-icon' size="72x72" href="/assets/images/favicons/apple-icon-72x72.png")
+        link(link='apple-touch-icon' size="76x76" href="/assets/images/favicons/apple-icon-76x76.png")
+        link(link='apple-touch-icon' size="114x114" href="/assets/images/favicons/apple-icon-114x114.png")
+        link(link='apple-touch-icon' size="120x120" href="/assets/images/favicons/apple-icon-120x120.png")
+        link(link='apple-touch-icon' size="144x144" href="/assets/images/favicons/apple-icon-144x144.png")
+        link(link='apple-touch-icon' size="152x152" href="/assets/images/favicons/apple-icon-152x152.png")
+        link(link='apple-touch-icon' size="180x180" href="/assets/images/favicons/apple-icon-180x180.png")
 
         meta(name="mobile-web-app-capable" content="yes")
-        link(rel="shortcut icon" href="/assets/favicons/favicon.ico")
-        link(rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png")
-        link(rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png")
-        link(rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png")
-        link(rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png")
-        link(rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png")
-        link(rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png")
-        link(rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png")
-        link(rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png")
-        link(rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png")
-        link(rel="icon" type="image/png" sizes="512x512"  href="/assets/favicons/android-icon-512x512.png")
-        link(rel="icon" type="image/png" sizes="192x192"  href="/assets/favicons/android-icon-192x192.png")
-        link(rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png")
-        link(rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png")
-        link(rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png")
-        meta(name="msapplication-TileColor" content="#ffffff")
-        meta(name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png")
+        link(rel="icon" type="image/png" sizes="192x192"  href="/assets/images/favicons/android-icon-192x192.png")
+        link(rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicons/favicon-96x96.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png")
+        link(rel="shortcut icon" href="/assets/images/favicons/favicon.ico")
 
-        link(rel="manifest", href="/manifest.json")
+        meta(name="msapplication-TileColor" content="#ffffff")
+        meta(name="msapplication-TileImage" content="/assets/images/favicons/ms-icon-70x70.png")
+        meta(name="msapplication-TileImage" content="/assets/images/favicons/ms-icon-144x144.png")
+        meta(name="msapplication-TileImage" content="/assets/images/favicons/ms-icon-150x150.png")
+        meta(name="msapplication-TileImage" content="/assets/images/favicons/ms-icon-310x310.png")
+
+        //- link(rel="manifest", href="/manifest.json")
         meta(name="theme-color" content="#ffffff")
 
-        title Modern Publisher
-        link(rel="manifest", href="/manifest.json")
+        title= title
         link(rel="stylesheet", href="/css/main.css")
+        //- link(rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" as="font" crossorigin="crossorigin")
+        link(href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css')
 
-        script(src="https://polyfill.io/v3/polyfill.min.js?flags=gated" async defer) 
-        script(src="/js/app.js" defer)
+        //- script(src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7&flags=gated" async defer) 
+        script(src="/js/app.js" defer) 
 
     body
-
-        include layout/intro
 
         //- include layout/header
 
