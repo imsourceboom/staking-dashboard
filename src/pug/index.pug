@@ -1,20 +1,21 @@
 extends ./_layout
 
 block main
-    include layout/header
-    include section/about
-    include section/services
-    include section/team
-    include section/portfolio
-    include section/partners
-    include section/contact
-        
-//- block main
-//-     include layout/header
-//-     include section/about
-//-     include section/services
-//-     include section/team
-//-     include section/portfolio
-//-     include section/partners
-//-     include section/contact
-        
+    //- include layout/header
+    //- include section/about
+    //- include section/services
+    //- include section/team
+    //- include section/portfolio
+    //- include section/partners
+    //- include section/contact
+    .container
+        nav.global-nav
+            .global-nav-links
+                a.global-nav-item(href='#') MAKE YOUR FREE
+        nav.local-nav
+            .local-nav-links
+                a.product-name(href='#') KILO
+                a(href='#') about
+                a(href='#') team
+                a(href='#') partners
+                a(href='#') contact
