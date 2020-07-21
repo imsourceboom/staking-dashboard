@@ -1,4 +1,5 @@
 import "./smoothscroll";
+import "./scrollControl";
 // import "./hamburger";
 // import "./menu";
 
