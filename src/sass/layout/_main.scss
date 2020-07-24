@@ -1,9 +1,14 @@
 body {
-  transition: 0.15s;
+  header,
+  main,
+  footer {
+    transition: 0.15s;
+  }
 
   &.brightness {
     header,
     main,
+    main *,
     footer {
       background-color: rgba(255, 255, 255, 1);
       color: rgba(29, 31, 31, 1);
@@ -12,6 +17,7 @@ body {
   &.darkness {
     header,
     main,
+    main *,
     footer {
       background-color: rgba(47, 53, 66, 1);
       color: rgba(255, 255, 255, 1);
