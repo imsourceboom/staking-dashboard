@@ -2,11 +2,39 @@ header {
   padding: 16px;
 
   .wrap {
-    max-width: 1000px;
+    max-width: $maxWidth + px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    $space: 10;
+    h2 {
+      position: relative;
+      margin-right: $space + px;
+      font-size: 1.5rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-45%);
+        display: block;
+        width: 1px;
+        height: 50%;
+        margin-right: -$space + px;
+      }
+    }
+    span {
+      font-size: 1.05em;
+      margin-left: $space + px;
+    }
   }
 
   .color-change {

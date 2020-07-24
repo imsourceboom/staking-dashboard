@@ -1,8 +1,8 @@
 footer {
-  padding: 26px;
+  padding: 0 16px 26px;
 
   .wrap {
-    max-width: 1000px;
+    max-width: $maxWidth + px;
     margin: 0 auto;
     text-align: center;
 

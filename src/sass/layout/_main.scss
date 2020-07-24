@@ -8,12 +8,24 @@ body {
   &.brightness {
     header,
     main,
-    main *,
+    // main *,
     footer {
       background-color: rgba(255, 255, 255, 1);
       color: rgba(29, 31, 31, 1);
     }
 
+    header {
+      h2 {
+        color: #3f51b5;
+
+        &::after {
+          background-color: rgba(47, 53, 66, 0.3);
+        }
+      }
+    }
+
+    .package,
+    .current,
     .next {
       &::before {
         background-color: rgba(47, 53, 66, 0.3);
@@ -23,12 +35,24 @@ body {
   &.darkness {
     header,
     main,
-    main *,
+    // main *,
     footer {
       background-color: rgba(47, 53, 66, 1);
       color: rgba(255, 255, 255, 1);
     }
 
+    header {
+      h2 {
+        color: #ee5253;
+
+        &::after {
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+
+    .package,
+    .current,
     .next {
       &::before {
         background-color: rgba(255, 255, 255, 1);
@@ -39,7 +63,7 @@ body {
 
 main {
   position: relative;
-  padding: 50px 16px 70px;
+  padding: 70px 16px 70px;
 
   a {
     display: block;
@@ -50,7 +74,7 @@ main {
 
 .container {
   // overflow-x: hidden;
-  max-width: 1000px;
+  max-width: $maxWidth + px;
   margin: 0 auto;
 
   .wrapper {
@@ -58,10 +82,14 @@ main {
     margin-bottom: $gap + px;
     position: relative;
 
+    &.total {
+      text-align: center;
+    }
+
+    &.package,
+    &.current,
     &.next {
-      margin-bottom: 0;
       padding-top: $gap + px;
-      text-align: right;
 
       &::before {
         content: "";
@@ -74,6 +102,10 @@ main {
         max-width: 300px;
         height: 1px;
       }
+    }
+
+    &.next {
+      text-align: right;
 
       .group {
         .date {
@@ -87,7 +119,7 @@ main {
     }
 
     .group {
-      margin-bottom: 70px;
+      margin-bottom: 50px;
 
       &:last-child {
         margin-bottom: 0;
@@ -146,5 +178,69 @@ main {
         }
       }
     }
+
+    &.package {
+      nav {
+        // display: flex;
+        text-align: center;
+
+        h3 {
+          display: inline-block;
+          font-size: 1.8rem;
+          letter-spacing: 0.1em;
+          margin-right: 2.3em;
+          opacity: 0.5;
+          cursor: pointer;
+
+          &.three {
+            margin-right: 0;
+          }
+
+          &.active {
+            opacity: 1;
+          }
+
+          @media (min-width: 1024px) {
+            margin-right: 4em;
+
+            &.three {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .box {
+        padding-top: 60px;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
+        .flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 370px;
+          margin: 0 auto 50px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          h3 {
+            margin-top: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .desk {
+    display: flex;
+    justify-content: space-between;
   }
 }
