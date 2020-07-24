@@ -1,5 +1,6 @@
 import "./smoothscroll";
 import "./colorChange";
+import "./preventDefault";
 // import "./hamburger";
 // import "./menu";
 

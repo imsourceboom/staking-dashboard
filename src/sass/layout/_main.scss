@@ -43,7 +43,9 @@ main {
   padding: 50px 16px 70px;
 
   a {
+    display: block;
     cursor: initial;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
