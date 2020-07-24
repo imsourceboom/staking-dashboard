@@ -1,7 +1,7 @@
 {
-  "name": "kilo",
+  "name": "staking-dashboard",
   "version": "1.0.0",
-  "description": "kilo",
+  "description": "staking-dashboard",
   "main": "index.js",
   "author": "imsourceboom (ecmascript.developer@gmail.com)",
   "license": "MIT",
