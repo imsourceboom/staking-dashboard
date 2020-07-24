@@ -39,7 +39,6 @@ body {
 
 main {
   position: relative;
-  // min-height: 100vh;
   padding: 50px 16px 70px;
 
   a {
@@ -106,12 +105,20 @@ main {
       }
 
       .date {
+        .year,
+        .month,
+        .day,
+        .hour,
+        .minute {
+          display: inline;
+        }
+
         span {
           font-size: 0.35em;
           font-weight: 400;
           display: inline-block;
           margin-left: 0.25em;
-          margin-right: 1.2em;
+          margin-right: 0.6em;
           opacity: 0.88;
 
           &:last-child {
