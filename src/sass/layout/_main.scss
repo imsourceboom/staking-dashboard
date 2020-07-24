@@ -43,7 +43,7 @@ main {
 
   a {
     display: block;
-    cursor: initial;
+    cursor: text;
     -webkit-tap-highlight-color: transparent;
   }
 }
@@ -133,11 +133,13 @@ main {
         .integer {
           display: inline;
         }
+
         .dot {
           display: inline;
           margin-left: -0.1em;
           margin-right: 0.1em;
         }
+
         small {
           font-size: 0.7em;
           opacity: 0.7;
