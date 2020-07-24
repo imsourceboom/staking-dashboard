@@ -1,9 +1,16 @@
+body {
+  transition: 0.15s;
+}
+
 main {
   position: relative;
   min-height: 100vh;
-  border: 3px dotted red;
+  padding: 0 16px;
 }
 
 .container {
   overflow-x: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 3px dotted red;
 }

@@ -1,0 +1,30 @@
+header {
+  padding: 16px;
+
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .color-change {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+    cursor: pointer;
+
+    &.brightness {
+      background-image: url("https://icongr.am/material/brightness-7.svg?size=24&color=ffd32a");
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    }
+    &.darkness {
+      background-image: url("https://icongr.am/material/brightness-3.svg?size=24&color=f1f2f6");
+      box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.36);
+    }
+  }
+}
