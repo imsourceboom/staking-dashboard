@@ -1,11 +1,15 @@
 footer {
-  padding: 24px;
-  // background-color: #ff5252;
-  // color: white;
+  padding: 26px;
 
   .wrap {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+
+    a {
+      display: block;
+      cursor: initial;
+      -webkit-tap-highlight-color: transparent;
+    }
   }
 }
